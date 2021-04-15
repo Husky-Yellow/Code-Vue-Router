@@ -1,9 +1,4 @@
 ## 手写简易版`vue-router`
-> 源码地址：[传送门](https://github.com/wangkaiwd/simple-vue-router)
-
-![](https://raw.githubusercontent.com/wangkaiwd/drawing-bed/master/Graduation%20Pattern%20Facebook%20Cover.png)
-
-`vue-router`是开发`vue`项目中必不可少的依赖，为了能更好的理解其实现原理，而源码阅读起来又过于复杂和枯燥，笔者这里实现一个简易版本的`vue-rouer`，帮助自己来更好的理解源码。
 
 其功能如下：
 * 通过`Vue`插件形式使用  
@@ -14,7 +9,7 @@
 * 路由守卫
 
 ### 基本使用
-> 基础`demo`单独新建了一个[分支](https://github.com/wangkaiwd/simple-vue-router/tree/basic-demo) ，方便学习和查看
+> 基础`demo`单独新建了一个[分支](https://github.com/Husky-Yellow/Code-Vue-Router/tree/basic-demo) ，方便学习和查看
 
 在实现自己的`router`之前，我们先使用官方的包来书写一个基础`demo`，之后我们会以这个`demo`为需求，一步步实现我们自己的`vue-router`。
 
@@ -24,7 +19,7 @@
 * 点击`About`会跳转到`About`页面
 * 而`About`又有`to a`和`to b`俩个链接，分别跳转到`a`和`b`页面
 
-![](https://raw.githubusercontent.com/wangkaiwd/drawing-bed/master/Oct-25-2020%2018-13-27.gif)
+![](https://gitee.com/husky-bear/picture-bed/raw/master/vue/Oct-25-2020%2018-13-27.gif)
 
 下面开始使用我们自己写的`vue-router`来实现上边展示的功能。
 
@@ -533,10 +528,3 @@ class HashHistory {
 * 根据一个递增的`index`来读取`beforeEachs`中的函数，执行时传入新的路由信息`route`、旧的路由信息`this.current`，以及需要用户调用的回调函数
 * 当用户调用回调后，`index+1`继续执行`next`函数，进而执行`beforeEachs`中的下一个函数
 * 当执行完`beforeEachs`中的所有函数后，为`$route`赋值最新的路由信息
-
-庆祝一下🤩，这里我们已经完成了文章开头定下的所有目标！
-
-### 结语
-希望在读完文章之后，能让读者对`vue-router`的底层实现有更深入的了解，明白日常使用的`API`是怎么来的，从而更加熟练的使用`vue-router`。
-
-最后，如果文章有帮到你的话，希望能点赞鼓励一下作者🤣。
